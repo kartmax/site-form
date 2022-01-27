@@ -4,7 +4,7 @@
       <meta charset="UTF-8">
       <!-- <base href="/"> -->
 
-      <title>Login</title>
+      <title>Payment</title>
       <meta name="description" content="">
 
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,30 +27,32 @@
 </header>
    <main>
 
-      <section class="login">
-         <div class="login-wrap main-form__wrap">
-            <img class="icon-logo" src="images/logo.svg" alt="Logo company">
-            <h1 class="login__heading">Login</h1>
-
-            <form class="main-form" name="login_form">
-               <input type="email" placeholder="Email address" name="email_login" required>
+      <section class="payment">
+         <div class="payment_form-wrap payment-wrap main-form__wrap">
+            <form class="main-form" name="payment_form">
                <div class="input-wrap">
-                  <input id="login-password" type="password" name="password_login" placeholder="Password" required>
+                  <input type="number" name="card_number" placeholder="Card number" required>
+                  <span class="input-icon"><svg class="icon mastercard"><use xlink:href="#mastercard"></use></svg></span>
+               </div>
+               <input type="text" name="first_name_user" placeholder="First name" required>
+               <input type="text" name="last_name_user" placeholder="Last name" required>
+               <input type="tel" pattern="^[\+]{0,1}\d+" name="phone" placeholder="Card holder number phone" required>
+               <input type="text" name="name_on_card" placeholder="Name on card" required>
+               <label class="date-wrap">Expiration
+                  <input type="month" name="from_date" id="from_date" required>
+                  <input type="month" name="to_date" required>
+               </label>
+               <input type="text" name="address" placeholder="Address line" required>
+               <select name="state_province" required>
+                  <option value="" disabled selected>State/Province</option>
+                  <option value="value_1">State 1</option>
+                  <option value="value_2">State 2</option>
+                  <option value="value_3">State 3</option>
+               </select>
+               <input type="number" name="zip_code" placeholder="Zip code" required>
 
-                  <button class="input-icon js-btn-password hide" aria-label="" title="" data-password-id="login-password" data-label-show="Show password" data-label-hide="Hide password">
-                     <svg class="icon view"><use xlink:href="#view"></use></svg>
-                  </button>
-               </div>
-               <div class="forgot">
-                  <a href="#">Forgot password</a>
-               </div>
-                  <button class="main-btn">Submit</button>
+               <button class="main-btn">Submit</button>
             </form>
-
-            <p>Don’t have an account?</p>
-            <a href="#">Register Now!</a>
-            <br>
-            <a class="help-link" href="#">Help for login problebms or problems staing logged into</a>
          </div>
       </section>
       
