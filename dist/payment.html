@@ -13,7 +13,7 @@
       <link rel="icon" href="images/favicon.png">
 	   <meta property="og:image" content="images/image.jpg">
 
-      <link rel="stylesheet" href="css/main.min.css?-v=20220127234835">
+      <link rel="stylesheet" href="css/main.min.css?-v=20220128234305">
    </head>
 <body>
    <!-- Preloader -->
@@ -23,36 +23,81 @@
 <!-- End Preloader -->
    <div class="overlay-bg"></div>
    <header class="header">
-   
+   <div class="logo">
+      <img class="icon-logo" src="images/logo.svg" alt="logo company">
+      <div class="logo-text">
+         <p class="logo-title">Company LLC</p>
+         <p class="logo-slogan">Simple, Fast, Affordable and Secure</p>
+      </div>
+   </div>
 </header>
    <main>
 
       <section class="payment">
-         <div class="payment_form-wrap payment-wrap main-form__wrap">
-            <form class="main-form" name="payment_form">
-               <div class="input-wrap">
-                  <input type="number" name="card_number" placeholder="Card number" required>
-                  <span class="input-icon"><svg class="icon mastercard"><use xlink:href="#mastercard"></use></svg></span>
-               </div>
-               <input type="text" name="first_name_user" placeholder="First name" required>
-               <input type="text" name="last_name_user" placeholder="Last name" required>
-               <input type="tel" pattern="^[\+]{0,1}\d+" name="phone" placeholder="Card holder number phone" required>
-               <input type="text" name="name_on_card" placeholder="Name on card" required>
-               <label class="date-wrap">Expiration
-                  <input type="month" name="from_date" id="from_date" required>
-                  <input type="month" name="to_date" required>
-               </label>
-               <input type="text" name="address" placeholder="Address line" required>
-               <select name="state_province" required>
-                  <option value="" disabled selected>State/Province</option>
-                  <option value="value_1">State 1</option>
-                  <option value="value_2">State 2</option>
-                  <option value="value_3">State 3</option>
-               </select>
-               <input type="number" name="zip_code" placeholder="Zip code" required>
+         <h1 class="payment__heading">Online payment processing</h1>
 
-               <button class="main-btn">Submit</button>
-            </form>
+         <div class="wrapper">
+            <div class="wrapper__item payment__price-wrap">
+               <div class="payment__price bg-module">
+                  <h2 class="main-form__title">Price-list</h2>
+                  <div class="payment__price-list border-light">
+                     <p class="payment__price_title">Invoice 1</p>
+                     <p class="payment__price_number">70 <span>USD</span></p>
+                     <p class="payment__price_title">Commission</p>
+                     <p class="payment__price_number">0.25 <span>USD</span></p>
+                     <p class="payment__price_title total">Total payment</p>
+                     <p class="payment__price_number total">70.25 <span>USD</span></p>
+                  </div>
+               </div>
+               <div class="warninng bg-module">
+                  <p class="">Please note; if per chance your payment is with a debit card you need to be aware that our system will process this payment by first attempting to collect the $0.25 fee followed by the $70.00 to AAA Water District should the payment to AAA Water District fail for any reason the fee transaction will be voided however due to the way debit cards work over the internet it will take an estimated 4 business days for the funds to be returned to the bank account they were debited from. This issue also applies to pre-paid credit cards, as well with pre-paid credit cards you may incur transaction fees from the issuer of the card so it is important to make sure the cards has enough funds to cover all the fees to avoid any issues.</p>
+               </div>
+            </div>
+
+            <div class="payment_form-wrap wrapper__item">
+               <div class="main-form__wrap bg-module">
+                  <form class="main-form payment__form" name="payment_form">
+                     <h2 class="main-form__title">Use this form to submit your Credit Card information</h2>
+                     <div class="input-wrap">
+                        <input type="number" name="card_number" placeholder="Card number" required>
+                        <span class="input-icon"><svg class="icon mastercard"><use xlink:href="#mastercard"></use></svg></span>
+                     </div>
+                     <input type="text" name="first_name_user" placeholder="First name" required>
+                     <input type="text" name="last_name_user" placeholder="Last name" required>
+                     <input type="tel" pattern="^[\+]{0,1}\d+" name="phone" placeholder="Card holder number phone" required>
+                     <input type="text" name="name_on_card" placeholder="Name on card" required>
+                     <label class="label-mouth" for="from_date">Expiration</label>
+                     <div class="mouth-wrap">
+                        <input type="month" name="from_date" id="from_date" required>
+                        <input type="month" name="to_date" required>
+                     </div>
+                     <input type="text" name="address" placeholder="Address line" required>
+                     <select name="state_province" required>
+                        <option value="" disabled selected>State/Province</option>
+                        <option value="value_1">State 1</option>
+                        <option value="value_2">State 2</option>
+                        <option value="value_3">State 3</option>
+                     </select>
+                     <input type="number" name="zip_code" placeholder="Zip code" required>
+                     <div class="border-light">
+                        <p>Do you wish to register your payment account details for future payments?</p>
+                        <div class="payment__radio_list">
+                           <div class="payment__radio_item">
+                              <input type="radio" name="payment-radio" id="payment_yes" value="yes">
+                              <label for="payment_yes">Yes</label>
+                           </div>
+                           <div class="payment__radio_item">
+                              <input type="radio" name="payment-radio" id="payment_no" value="no" checked>
+                              <label for="payment_no">No</label>
+                           </div>
+                        </div>
+                        <p class="payment__dop-info">(please note that saving this information is not the same as signing up for automatic payments although you can use the saved information for enrollment in automatic payments)</p>
+                     </div>
+
+                     <button class="main-btn payment__btn-submit">Submit</button>
+                  </form>
+               </div>
+            </div>
          </div>
       </section>
       
@@ -81,7 +126,7 @@
 
    <button type="button" class="scrolltop js-scrolltop"></button>
    
-   <script src="js/app.min.js?-v=20220127234835"></script>
+   <script src="js/app.min.js?-v=20220128234305"></script>
 </body>
 
 </html>
