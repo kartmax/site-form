@@ -13,7 +13,7 @@
       <link rel="icon" href="images/favicon.png">
 	   <meta property="og:image" content="images/image.jpg">
 
-      <link rel="stylesheet" href="css/main.min.css?-v=20220128234937">
+      <link rel="stylesheet" href="css/main.min.css?-v=20220129190048">
    </head>
 <body>
    <!-- Preloader -->
@@ -62,23 +62,43 @@
                         <input type="number" name="card_number" placeholder="Card number" required>
                         <span class="input-icon"><svg class="icon mastercard"><use xlink:href="#mastercard"></use></svg></span>
                      </div>
-                     <input type="text" name="first_name_user" placeholder="First name" required>
-                     <input type="text" name="last_name_user" placeholder="Last name" required>
-                     <input type="tel" pattern="^[\+]{0,1}\d+" name="phone" placeholder="Card holder number phone" required>
-                     <input type="text" name="name_on_card" placeholder="Name on card" required>
-                     <label class="label-mouth" for="from_date">Expiration</label>
-                     <div class="mouth-wrap">
-                        <input type="month" name="from_date" id="from_date" required>
-                        <input type="month" name="to_date" required>
-                     </div>
-                     <input type="text" name="address" placeholder="Address line" required>
-                     <select name="state_province" required>
-                        <option value="" disabled selected>State/Province</option>
-                        <option value="value_1">State 1</option>
-                        <option value="value_2">State 2</option>
-                        <option value="value_3">State 3</option>
-                     </select>
-                     <input type="number" name="zip_code" placeholder="Zip code" required>
+
+                     <fieldset>
+                        <legend>Person data</legend>
+                        <input type="text" name="first_name_user" placeholder="First name" required>
+                        <input type="text" name="last_name_user" placeholder="Last name" required>
+                     </fieldset>
+
+                     <fieldset>
+                        <legend>Card details</legend>
+                        <input type="tel" pattern="^[\+]{0,1}\d+" name="phone" placeholder="Card holder number phone" required>
+                        <input type="text" name="name_on_card" placeholder="Name on card" required>
+                     </fieldset>
+
+                     <fieldset>
+                        <legend>Expiration</legend>
+                        <div class="month-wrap">
+                           <label for="from_date">From:</label>
+                           <input type="month" name="from_date" id="from_date" required>
+                        </div>
+                        <div class="month-wrap">
+                           <label for="from_date">To:</label>
+                           <input type="month" name="to_date" required>
+                        </div>
+                     </fieldset>
+
+                     <fieldset>
+                        <legend>Address data</legend>
+                        <input type="text" name="address" placeholder="Address line" required>
+                        <select name="state_province" required>
+                           <option value="" disabled selected>State/Province</option>
+                           <option value="value_1">State 1</option>
+                           <option value="value_2">State 2</option>
+                           <option value="value_3">State 3</option>
+                        </select>
+                        <input type="number" name="zip_code" placeholder="Zip code" required>
+                     </fieldset>
+
                      <div class="border-light">
                         <p>Do you wish to register your payment account details for future payments?</p>
                         <div class="payment__radio_list">
@@ -126,7 +146,7 @@
 
    <button type="button" class="scrolltop js-scrolltop"></button>
    
-   <script src="js/app.min.js?-v=20220128234937"></script>
+   <script src="js/app.min.js?-v=20220129190048"></script>
 </body>
 
 </html>
